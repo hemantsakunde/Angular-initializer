@@ -1,0 +1,15 @@
+@use "@angular/material" as mat;
+
+html {
+  color-scheme: dark;
+  @include mat.theme(
+    (
+      color: mat.$magenta-palette,
+      typography: "Inter Tight, sans-serif",
+    )
+  );
+}
+
+body {
+  font-family: "Inter tight", sans-serif;
+}

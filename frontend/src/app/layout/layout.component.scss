@@ -1,0 +1,32 @@
+@media (max-width: 1024px) {
+  img {
+    width: 32rem;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 20rem;
+  }
+}
+
+.container {
+  padding: 80px;
+}
+
+img {
+  max-width: 40rem;
+}
+
+.logo-container,
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.form-field {
+  margin-bottom: 32px;
+}

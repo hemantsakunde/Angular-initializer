@@ -1,0 +1,54 @@
+<app-loader *ngIf="loader"></app-loader>
+<div class="container">
+  <div class="logo-container">
+    <img src="logo.png" alt="logo" />
+  </div>
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <mat-form-field>
+          <mat-label>Angular version?</mat-label>
+          <mat-select formControlName="angularVersion">
+            <mat-option value="20">20</mat-option>
+            <mat-option value="19">19</mat-option>
+            <mat-option value="18">18</mat-option>
+            <mat-option value="17">17</mat-option>
+            <mat-option value="16">16</mat-option>
+            <mat-option value="15">15</mat-option>
+            <mat-option value="14">14</mat-option>
+            <mat-option value="13">13</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-field">
+        <mat-form-field>
+          <mat-label>Project name?</mat-label>
+          <input matInput formControlName="projectName"/>
+        </mat-form-field>
+      </div>
+      <div class="form-field">
+        <mat-form-field>
+          <mat-label>Enable SSR & SSG?</mat-label>
+          <mat-select formControlName="ssr">
+            <mat-option value="true">Yes</mat-option>
+            <mat-option value="false">No</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-field">
+        <mat-form-field>
+          <mat-label>Stylesheet?</mat-label>
+          <mat-select formControlName="stylesheet">
+            <mat-option value="css">CSS</mat-option>
+            <mat-option value="scss">SCSS</mat-option>
+            <mat-option value="sass">SASS</mat-option>
+            <mat-option value="less">LESS</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button>Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
