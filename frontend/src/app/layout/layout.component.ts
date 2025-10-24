@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
@@ -10,7 +10,6 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { MatStepperModule } from '@angular/material/stepper';
 import { saveAs } from 'file-saver';
 import { LoaderComponent } from "../loader/loader.component";
-import { BehaviorSubject } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { DataService } from '../services/data.service';
 import { environment } from '../../environments/environment';
