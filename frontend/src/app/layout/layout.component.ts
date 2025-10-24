@@ -49,7 +49,7 @@ export class LayoutComponent {
   onSubmit() {
     if (this.form.valid) {
       this.fileName = this.form.value.projectName + '.zip';
-      this.httpClient.post("http://localhost:8080", this.form.value, { responseType: "blob" })
+      this.httpClient.post("https://angular-initializer.onrender.com", this.form.value, { responseType: "blob" })
         .subscribe((r) => {
           saveAs(r, this.fileName);
         }
