@@ -13,8 +13,7 @@ import { LoaderComponent } from "../loader/loader.component";
 import { BehaviorSubject } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { DataService } from '../services/data.service';
-import { environment } from '../../environments/environment.';
-
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-layout',
