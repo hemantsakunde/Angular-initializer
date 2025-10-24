@@ -13,7 +13,7 @@ import { LoaderComponent } from "../loader/loader.component";
 import { BehaviorSubject } from 'rxjs';
 import { NgIf } from '@angular/common';
 import { DataService } from '../services/data.service';
-
+import { environment } from '../../environments/environment.';
 
 
 @Component({
@@ -49,7 +49,7 @@ export class LayoutComponent {
   onSubmit() {
     if (this.form.valid) {
       this.fileName = this.form.value.projectName + '.zip';
-      this.httpClient.post("https://angular-initializer.onrender.com", this.form.value, { responseType: "blob" })
+      this.httpClient.post(environment.apiUrl, this.form.value, { responseType: "blob" })
         .subscribe((r) => {
           saveAs(r, this.fileName);
         }
